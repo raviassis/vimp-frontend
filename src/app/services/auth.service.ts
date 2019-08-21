@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserResponse } from './models/user.response';
+import { environment } from 'src/environments/environment';
 
 const helper = new JwtHelperService();
 
@@ -10,7 +11,7 @@ const helper = new JwtHelperService();
   providedIn: 'root',
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:3000/';
+  private baseUrl = environment.apiVimpUrl;
 
   constructor(
     private http: HttpClient) { }

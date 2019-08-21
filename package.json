@@ -27,6 +27,7 @@
     "@auth0/angular-jwt": "^3.0.0",
     "core-js": "^3.2.1",
     "express": "^4.17.1",
+    "ngx-spinner": "^8.0.3",
     "path": "^0.12.7",
     "rxjs": "~6.5.2",
     "zone.js": "^0.10.2"
