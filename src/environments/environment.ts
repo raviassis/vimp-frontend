@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  apiVimpUrl: "http://localhost:3000/",
+  apiVimpUrl: 'http://localhost:3000/',
   production: false
 };
 

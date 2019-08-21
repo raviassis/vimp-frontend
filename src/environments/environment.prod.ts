@@ -1,4 +1,4 @@
 export const environment = {
-  apiVimpUrl: 'http://localhost:3000/',
+  apiVimpUrl: 'https://vimp-backend.herokuapp.com/',
   production: true
 };
