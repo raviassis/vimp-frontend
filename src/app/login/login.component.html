@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="login-card">
+    <h2 class="title">Sign In</h2>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Email" [(ngModel)]='email'>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" [(ngModel)]='password'>
+      </mat-form-field>
+    </div>
+    <div *ngIf="msgError" class="alert alert-danger">
+      {{msgError}}
+    </div>
+    <div class="footer">
+      <button mat-raised-button color="primary" (click)='login()'>Login</button>
+    </div>
+  </div>
+</div>
