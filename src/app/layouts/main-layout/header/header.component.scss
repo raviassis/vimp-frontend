@@ -1,0 +1,23 @@
+.nav-bar{
+    min-height: 10px;
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+
+    .nav-block{
+        display: flex;
+        align-items: center;
+    }
+}
+
+.title{
+    font-size: 24px;
+    margin: 0;
+}
+
+.img-profile {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}

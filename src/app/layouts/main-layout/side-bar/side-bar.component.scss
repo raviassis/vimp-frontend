@@ -1,0 +1,15 @@
+.side-nav{
+    padding: 0 5px;
+    min-width: 200px;
+    ul {
+        list-style: none;
+    }
+
+    &-header{
+
+    }
+
+    &-body{
+        padding: 0 0 0 10px;
+    }
+}

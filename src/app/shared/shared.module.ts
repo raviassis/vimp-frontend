@@ -6,6 +6,12 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -14,17 +20,29 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [
     CommonModule,
     FormsModule,
-    MatInputModule,
-    MatButtonModule,
     HttpClientModule,
     NgxSpinnerModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatCardModule,
+    MatFormFieldModule,
   ],
   exports: [
     FormsModule,
     MatInputModule,
-    MatButtonModule,
     HttpClientModule,
     NgxSpinnerModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatMenuModule,
+    MatCardModule,
+    MatFormFieldModule,
   ],
 })
 export class SharedModule { }

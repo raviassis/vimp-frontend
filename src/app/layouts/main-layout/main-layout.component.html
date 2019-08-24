@@ -1,0 +1,12 @@
+
+<mat-sidenav-container>
+    <mat-sidenav #side mode="side" [fixedInViewport]="true">
+        <app-side-bar [side]="side"></app-side-bar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header [side]="side"></app-header>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>

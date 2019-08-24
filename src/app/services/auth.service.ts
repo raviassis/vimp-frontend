@@ -4,6 +4,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UserResponse } from './models/user.response';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 const helper = new JwtHelperService();
 
@@ -14,7 +15,8 @@ export class AuthService {
   private baseUrl = environment.apiVimpUrl;
 
   constructor(
-    private http: HttpClient) { }
+    private http: HttpClient,
+    private router: Router) { }
 
   public login(email, password): Observable<UserResponse> {
     const heroesUrl = this.baseUrl + 'auth/login';
@@ -25,6 +27,11 @@ export class AuthService {
       }
     );
     return obervable;
+  }
+
+  public logout() {
+    sessionStorage.removeItem('token');
+    this.router.navigateByUrl('/login');
   }
 
   public isAuthenticated(): boolean {

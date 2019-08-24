@@ -1,0 +1,13 @@
+<nav class="side-nav">
+    <div class="side-nav-header">
+        <button mat-icon-button (click)="sideToggle()">
+            <mat-icon aria-hidden="false" aria-label="Close side bar">close</mat-icon>
+        </button>
+    </div>
+    <mat-nav-list>
+        <a *ngFor="let link of links" mat-list-item [routerLink]="link.url">
+            <mat-icon mat-list-icon>{{link.icon}}</mat-icon>
+            {{link.name}}
+        </a>
+    </mat-nav-list>
+</nav>

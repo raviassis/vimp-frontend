@@ -1,0 +1,24 @@
+<header class="nav-bar">
+    <div class="nav-block">        
+        <button mat-icon-button (click)="sideToggle()">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">menu</mat-icon>
+        </button>
+    </div>
+    <div class="nav-block">
+        <h1 class="title">VIMP</h1>
+    </div>
+    <div class="nav-block">
+        <img class="img-profile" src="assets/images/profile.jpg" alt="profile">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <mat-divider></mat-divider>
+            <button mat-menu-item (click)="logout()">
+                <mat-icon>power_settings_new</mat-icon>
+                Logout
+            </button>
+        </mat-menu>
+    </div>    
+</header>
