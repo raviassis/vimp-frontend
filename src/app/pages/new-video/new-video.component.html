@@ -4,18 +4,18 @@
     <form [formGroup]="videoForm" (ngSubmit)="onSubmit()" class="grid">
         <div class="grid grid-columns-2">
             <mat-form-field class="input">
-                <input matInput placeholder="Name Video" formControlName="name" required>
+                <input matInput placeholder="Name Video" formControlName="name">
             </mat-form-field>
             <mat-form-field class="input">
-                <input matInput placeholder="Name URL" formControlName="nameUrl" required>
+                <input matInput placeholder="Name URL" formControlName="nameUrl">
             </mat-form-field>   
         </div>
         <div class="grid grid-columns-2">
             <mat-form-field class="input">
-                <input matInput placeholder="Video URL" formControlName="videoUrl" required>
+                <input matInput placeholder="Video URL" formControlName="videoUrl">
             </mat-form-field>
             <mat-form-field class="input">
-                <input matInput placeholder="Duration" formControlName="duration" required> 
+                <input matInput placeholder="Duration" formControlName="duration"> 
                 <div matSuffix>min</div>
             </mat-form-field>
         </div>           

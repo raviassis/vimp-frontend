@@ -15,9 +15,7 @@ export class JwtInterceptor implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler,
   ): Observable<HttpEvent<any>> {
-    console.log('caiu aki');
     const token = sessionStorage.getItem('token');
-    console.log('token ' + token );
     if (token) {
       const dupReq = req.clone({
         headers: req.headers.set('authorization', token),
