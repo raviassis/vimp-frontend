@@ -23,7 +23,7 @@ export class AuthService {
     const obervable = this.http.post<UserResponse>(heroesUrl, {email, password});
     obervable.subscribe(
       (res) => {
-        sessionStorage.setItem('token', JSON.stringify(res.token));
+        sessionStorage.setItem('token', res.token);
       }
     );
     return obervable;

@@ -1,20 +1,42 @@
 <h1>Videos > New</h1>
 
 <mat-card>
-    <mat-form-field>
-        <input matInput placeholder="Name Video" required>
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Name URL" required>
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Video URL" required>
-    </mat-form-field>
-    <mat-form-field>
-        <textarea matInput placeholder="Description"></textarea>
-    </mat-form-field>
-    <mat-form-field>
-        <input matInput placeholder="Duration" required>
-        <div matSuffix>min</div>
-    </mat-form-field>
+    <form [formGroup]="videoForm" (ngSubmit)="onSubmit()" class="grid">
+        <div class="grid grid-columns-2">
+            <mat-form-field class="input">
+                <input matInput placeholder="Name Video" formControlName="name" required>
+            </mat-form-field>
+            <mat-form-field class="input">
+                <input matInput placeholder="Name URL" formControlName="nameUrl" required>
+            </mat-form-field>   
+        </div>
+        <div class="grid grid-columns-2">
+            <mat-form-field class="input">
+                <input matInput placeholder="Video URL" formControlName="videoUrl" required>
+            </mat-form-field>
+            <mat-form-field class="input">
+                <input matInput placeholder="Duration" formControlName="duration" required> 
+                <div matSuffix>min</div>
+            </mat-form-field>
+        </div>           
+        
+        <mat-form-field class="input">
+            <textarea matInput placeholder="Description" formControlName="description"></textarea>
+        </mat-form-field>
+        
+        <div class="fileInput">
+            <input hidden type="file" #file (change)="fileChange($event)" formControlName="file">
+            <button type="button" mat-flat-button color="primary" (click)="file.click()">Choose a Image</button>
+            <div>
+                <span>{{nameFile}}</span>
+            </div>            
+        </div>
+        <div class="endForm">
+            <button mat-flat-button color="primary" type="submit" [disabled]="videoForm.invalid">Save</button>
+        </div>        
+    </form>
+    <ngx-spinner bdOpacity = 0.9 bdColor = "rgba(51,51,51,0.60)" size = "medium"
+            color = "#fff" type = "ball-clip-rotate" [fullScreen] = "true" [name]="createVideoSpinnerName">
+    </ngx-spinner>
+    
 </mat-card>

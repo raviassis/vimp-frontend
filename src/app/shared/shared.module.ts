@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
 
 import {MatInputModule} from '@angular/material/input';
@@ -12,6 +12,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 
@@ -20,6 +21,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     NgxSpinnerModule,
     MatInputModule,
@@ -30,11 +32,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatMenuModule,
     MatCardModule,
     MatFormFieldModule,
+    MatSnackBarModule,
   ],
   exports: [
     FormsModule,
     MatInputModule,
     HttpClientModule,
+    ReactiveFormsModule,
     NgxSpinnerModule,
     MatButtonModule,
     MatSidenavModule,
@@ -43,6 +47,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatMenuModule,
     MatCardModule,
     MatFormFieldModule,
+    MatSnackBarModule,
   ],
 })
 export class SharedModule { }

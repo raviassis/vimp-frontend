@@ -1,3 +1,33 @@
-.mat-card > * {
-    width: 100%;
+.mat-card > form {
+    .input{
+        padding: 0 10px;
+    }
+
+    .endForm{
+        margin-top: 10px;
+    }
+}
+
+.fileInput{
+    display: flex;
+    & > button{
+        width: 190px;
+        margin-right: 10px;
+    }
+}
+
+.flex {
+    display: flex;
+
+    &-space-around {
+        justify-content: space-around;
+    }
+}
+
+.grid {
+    display: grid;
+
+    &-columns-2{
+        grid-template-columns: 1fr 1fr;
+    }
 }
